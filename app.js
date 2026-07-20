@@ -2,9 +2,9 @@ const express = require("express");
 
 const app = express();
 
-app.get("/", (req, res) => {
+app.get("/health", (req, res) => {
     res.json({
-        message: "Project 49 API Running"
+        status: "UP"
     });
 });
 
