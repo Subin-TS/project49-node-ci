@@ -5,7 +5,7 @@ const app = express();
 // Root endpoint
 app.get("/", (req, res) => {
     res.json({
-        message: "Project 49 API Running"
+        message: "Project 49 API is ok"
     });
 });
 
@@ -13,6 +13,14 @@ app.get("/", (req, res) => {
 app.get("/health", (req, res) => {
     res.json({
         status: "UP"
+    });
+});
+
+// Info endpoint to trigger branch protection check
+app.get("/info", (req, res) => {
+    res.json({
+        environment: "production",
+        version: "1.0.0"
     });
 });
 
