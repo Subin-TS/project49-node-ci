@@ -5,7 +5,7 @@ const app = express();
 // Root endpoint
 app.get("/", (req, res) => {
     res.json({
-        message: "Project 49 API is ok"
+        message: "Project 49 API Running"
     });
 });
 
